@@ -1,0 +1,60 @@
+body {
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Prata', serif;
+	/*font-family: 'Vidaloka', serif;*/
+	font-size: 4em;
+}
+
+h3, h2 {
+	font-family: 'Biryani', sans-serif;
+	font-size: 2em;
+}
+
+fieldset {
+	width: 500px;
+	margin: 0 auto;
+	line-height: 5px;
+}
+
+fieldset p {
+	clear: both;
+	padding: 5px;
+	text-align: center;
+}
+
+.button {
+	background-color: white;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	font-family: 'Biryani', sans-serif;
+	font-size:17px;
+	padding:10px 20px;
+	text-decoration:none;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.button10 {
+	background-color: white;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	border:1px solid #566963;
+/*	display:inline-block;*/
+	cursor:pointer;
+	font-family: 'Biryani', sans-serif;
+	font-size:14px;
+	padding:7px 12px;
+	text-decoration:none;
+	float: left;
+
+}

@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>ImmediaPhoto</title>
-</head>
-<body>
-<header>
-	<h1>ImmediaPhoto</h1>
-</header>
 
-<div id="main">
-	<%= yield %>
-</div>
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Immedia Photo</title>
+	<meta name="description" content="Bookmark your pictures">
+	<meta name="author" content="James Rutledge">
 
-</body>
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href='http://fonts.googleapis.com/css?family=Biryani:200' rel='stylesheet' type='text/css'>
+<!-- 
+	<link href='http://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'> -->
+
+	<link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	</head>
+
+	<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<form action="/logout" method="do">
+	<div>
+		<p><input class="button10" type="submit" value="Log out"></p>
+	</div>	
+<br>
+<br>
+	<div>
+		<h1>ImmediaPhoto</h1>
+	</div>
+
+	<body>
+
+		<div id="main">
+			<%= yield %>
+		</div>
+
+	</body>
+
 </html>
