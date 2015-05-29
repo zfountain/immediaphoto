@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 
 # Include the user model 
 require_relative './user'
+require_relative './image'
 
 # Sessions are turned off by default, so enable it here
 # We use sessions in our app to keep track of authenticated users. If we didn't 
@@ -82,12 +83,13 @@ end
 
 # Diplay the image upload form 
 get '/upload' do
-
+	erb :upload
 end
 
 # Process image upload data and add it to the database
 post '/upload' do
-
+	image = Image.new(:title => params[:title], :url => params[:url], :user_id => user.id)
+	image.save
 end
 
 # Display the current user 
