@@ -22,7 +22,12 @@ before do
 		# We don't know who this is yet
 		@current_user = nil
 	end
-end 
+end
+
+# Closes database connection after every request
+after do
+  ActiveRecord::Base.connection.close
+end
 
 # Homepage route
 get '/' do
@@ -97,7 +102,8 @@ post '/upload' do
 end
 
 # Display the current user 
-get '/user' do 
+get '/user' do
+	# image = Image.find_by(url => params['http://ahhh-design.com/wp-content/uploads/2013/10/9.jpg'])
 	erb :user
 end
 
