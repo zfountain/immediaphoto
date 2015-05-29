@@ -88,8 +88,12 @@ end
 
 # Process image upload data and add it to the database
 post '/upload' do
-	image = Image.new(:title => params[:title], :url => params[:url], :user_id => user.id)
+	# Create an instance of an image with new data
+	image = Image.new(:title => params[:title], :url => params[:image], :user_id => session[:user_id])
 	image.save
+
+	# Redirects the user to their own page
+	redirect('/user')
 end
 
 # Display the current user 
